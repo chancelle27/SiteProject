@@ -1,9 +1,9 @@
 <script setup>
-import Présentation from '../components/Présentation.vue'
+import Presentation from '../components/Presentation.vue'
 </script>
 
 <template>
   <div>
-    <Présentation />
+    <Presentation />
   </div>
 </template>
