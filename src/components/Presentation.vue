@@ -6,7 +6,8 @@ import Header from './Header.vue'
   <div
     class="presentation"
     style="
-      background-color: rgb(160, 73, 119); /*background-image: url(src/assets/img/image10.jpeg);*/
+      background-color: rgb(160, 73, 119);
+      z-index: 10; /*background-image: url(src/assets/img/image10.jpeg);*/
     "
   >
     <Header />
@@ -18,8 +19,8 @@ import Header from './Header.vue'
             ><h2>Sport, Motivation, Lifestyle & <br />Nutrition</h2></span
           >
           <br />
-          <span
-            ><img
+          <span>
+            <img
               src="src/assets/img/skew.png"
               class="object-fit-sm-contain border rounded"
               alt=""

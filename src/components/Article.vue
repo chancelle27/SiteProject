@@ -1,52 +1,166 @@
-<script setup></script>
+<script>
+import Exemple from '../components/Exemple.vue'
 
+export default {
+  components: {
+    Exemple
+  },
+  setup() {
+    const data = [
+      {
+        name: 'MARKETING DIGITAL',
+        description: 'Optimisez votre fiche Google My Business',
+        auteur: 'par Romane Mary',
+        urlImage: 'src/assets/img/image (7).jpeg'
+      },
+      {
+        name: 'MARKETING DIGITAL',
+        description: 'Optimisez votre fiche Google My Business',
+        auteur: 'par Romane Mary',
+        urlImage: 'src/assets/img/image11.jpeg'
+      },
+      {
+        name: 'MARKETING DIGITAL',
+        description: 'Optimisez votre fiche Google My Business',
+        auteur: 'par Romane Mary',
+        urlImage: 'src/assets/img/image (9).jpeg'
+      },
+      {
+        name: 'MARKETING DIGITAL',
+        description: 'Optimisez votre fiche Google My Business',
+        auteur: 'par Romane Mary',
+        urlImage: 'src/assets/img/image (6).jpeg'
+      },
+      {
+        name: 'MARKETING DIGITAL',
+        description: 'Optimisez votre fiche Google My Business',
+        auteur: 'par Romane Mary',
+        urlImage: 'src/assets/img/image (8).jpeg'
+      },
+      {
+        name: 'MARKETING DIGITAL',
+        description: 'Optimisez votre fiche Google My Business',
+        auteur: 'par Romane Mary',
+        urlImage: 'src/assets/img/image (6).jpeg'
+      }
+    ]
+
+    return {
+      data
+    }
+  }
+}
+</script>
 <template>
-    <article>
-  <div class="container">
-    <nav class="navbar navbar-expand-lg">
+  <article>
+    <div class="conteneur">
       <div class="information">
-        <h4 class="head" style="color: rgb(223, 107, 126)">NOS ARTICLES</h4>
-        <div class="carte" style="float: left">
-          <img
-            src="src/assets/img/lot.png"
-            class="carte-img"
-            alt=""
-            style="width: 50%; height: 60%; border-radius: 5%"
-          />
-          <div class="body">
-            <h5 class="titre" style="color: rgb(223, 107, 126)">
-              <strong>CLUB DE FITNESS</strong>
+        <div
+          class="titre"
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+            margin-left: 100px;
+          "
+        >
+          <h4 class="head" style="color: rgb(223, 107, 126)">NOS ARTICLES</h4>
+        </div>
+        <div class="carte" style="display: flex; justify-content: space-between">
+          <div class="body" style="margin-left: 150px; margin-top: 50px">
+            <img
+              src="src/assets/img/lot.png"
+              class="carte-img"
+              alt=""
+              style="width: 600px; height: 500px; border-radius: 5%"
+            />
+            <h5 class="titre" style="color: rgb(223, 107, 126); margin-top: 20px">
+              <strong class="1">CLUB DE FITNESS</strong>
             </h5>
-            <p class="texte"><strong>Participez aux Resofit Meet les 29 et 30 juin !</strong></p>
+            <a href="" style="color: black; text-decoration: none"
+              ><h3 class="texte" style="margin-top: 20px">
+                <strong>Participez aux Resofit Meet les 29 et 30 juin !</strong>
+              </h3></a
+            >
             <span class="auteur" style="color: rgba(0, 0, 0, 0.455)">par Romane Mary</span>
+          </div>
+          <div class="" style="height: 100vh; overflow-y: scroll">
+            <Exemple v-for="(item, index) in data" :key="index" :donne="item" />
           </div>
         </div>
       </div>
-      <nav class="nav right">
-        <ol>
-          <li class="nav">
-            <div
-              class="header"
-              style="
-                display: block;
-                overflow: hidden;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                right: 0;
-                left: 0;
-                box-sizing: border-box;
-                margin: 0;
-              "
-            >
-              <img src="src/assets/img/market-.png" alt="" style="width: 30px; height: 30px;" />
+      <div class="conteneur2">
+        <div
+          class="information2"
+          style="
+            display: flex;
+            justify-content: space-between;
+            margin-top: 50px;
+            background-color: rgba(208, 202, 202, 0.35);
+            height: 46vh;
+          "
+        >
+          <div
+            class="body2"
+            style="
+              margin-left: 150px;
+              margin-top: 80px;
+              display: flex;
+              justify-content: space-between;
+            "
+          >
+            <img
+              src="src/assets/img/lot.png"
+              class="carte-img"
+              alt=""
+              style="width: 600px; height: 500px; border-radius: 5%"
+            />
+            <div class="info" style="margin-left: 80px">
+              <span
+                ><h5
+                  class="titre"
+                  style="color: rgb(223, 107, 126); margin-top: 10px; margin-bottom: 40px"
+                >
+                  MARKETING DIGITAL
+                </h5></span
+              >
+              <a href="" style="color: black; text-decoration: none"
+                ><span>
+                  <h1 class="descrip" style="margin-bottom: 40px">La réouverture approche</h1></span
+                ></a
+              >
+              <span>
+                <img
+                  src="src/assets/img/skew.png"
+                  class="object-fit-sm-contain border rounded"
+                  alt=""
+                  style="width: 40px; height: 20px; margin-bottom: 40px"
+              /></span>
+              <span><p class="date" style="margin-bottom: 40px">19 mai 2021</p></span>
+              <span class="image"
+                ><img
+                  src="src/assets/img/lot.png"
+                  alt=""
+                  style="width: 100px; height: 100px; border-radius: 50%"
+              /></span>
+              <p class="auteur" style="color: rgb(159, 158, 158)">Romane Mary</p>
             </div>
-          </li>
-        </ol>
-    </nav>
-    </nav>
-  </div>
-</article>
+          </div>
+        </div>
+        <div class="contenu">
+          <div
+            class="titre3"
+            style="margin-top: 300px; margin-left: 100px; color: rgb(223, 107, 126)"
+          >
+            <h2>Toute l'actualité</h2>
+          </div>
+          <div class="article d-flex justify-content-evenly flex-wrap">
+            <Exemple v-for="(item, index) in data" :key="index" :donne="item" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
 </template>
 
 <style scoped>

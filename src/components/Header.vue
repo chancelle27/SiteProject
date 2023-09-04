@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <nav class="navbar navbar-expand-lg header">
+  <nav class="navbar navbar-expand-lg header" style="position: fixed; top: 0px">
     <div class="container-fluid">
       <a class="navbar-brand text-white fw-bold" href="#"
         ><img
@@ -48,6 +48,7 @@
 
 <style scoped>
 .header {
-  background: none;
+  background-color: rgb(160, 73, 119);
+  width: 100%;
 }
 </style>
