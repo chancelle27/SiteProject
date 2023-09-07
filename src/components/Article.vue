@@ -1,49 +1,20 @@
 <script>
 import Exemple from '../components/Exemple.vue'
+import { ref } from 'vue'
 
 export default {
   components: {
     Exemple
   },
   setup() {
-    const data = [
-      {
-        name: 'MARKETING DIGITAL',
-        description: 'Optimisez votre fiche Google My Business',
-        auteur: 'par Romane Mary',
-        urlImage: 'src/assets/img/image (7).jpeg'
-      },
-      {
-        name: 'MARKETING DIGITAL',
-        description: 'Optimisez votre fiche Google My Business',
-        auteur: 'par Romane Mary',
-        urlImage: 'src/assets/img/image11.jpeg'
-      },
-      {
-        name: 'MARKETING DIGITAL',
-        description: 'Optimisez votre fiche Google My Business',
-        auteur: 'par Romane Mary',
-        urlImage: 'src/assets/img/image (9).jpeg'
-      },
-      {
-        name: 'MARKETING DIGITAL',
-        description: 'Optimisez votre fiche Google My Business',
-        auteur: 'par Romane Mary',
-        urlImage: 'src/assets/img/image (6).jpeg'
-      },
-      {
-        name: 'MARKETING DIGITAL',
-        description: 'Optimisez votre fiche Google My Business',
-        auteur: 'par Romane Mary',
-        urlImage: 'src/assets/img/image (8).jpeg'
-      },
-      {
-        name: 'MARKETING DIGITAL',
-        description: 'Optimisez votre fiche Google My Business',
-        auteur: 'par Romane Mary',
-        urlImage: 'src/assets/img/image (6).jpeg'
-      }
-    ]
+    const data = ref([])
+
+    fetch("http://127.0.0.1:8000/api/articles")
+    .then(response => response.json())
+    .then(articles => { 
+      data.value = articles
+    })
+    .catch(error => alert(error.stack))
 
     return {
       data
