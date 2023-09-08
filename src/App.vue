@@ -1,10 +1,10 @@
 <script setup>
-import HomeView from './views/HomeView.vue'
-</script>
+import Footer from './components/Footer.vue'</script>
 
 <template>
   <main>
-    <HomeView />
+    <router-view></router-view>
+    <Footer />
   </main>
 </template>
 

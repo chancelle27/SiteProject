@@ -1,5 +1,5 @@
 <script>
-import Exemple from '../components/Exemple.vue'
+import Exemple from './Exemple.vue'
 import { ref } from 'vue'
 
 export default {
@@ -9,12 +9,12 @@ export default {
   setup() {
     const data = ref([])
 
-    fetch("http://127.0.0.1:8000/api/articles")
-    .then(response => response.json())
-    .then(articles => { 
-      data.value = articles
-    })
-    .catch(error => alert(error.stack))
+    fetch('http://127.0.0.1:8000/api/articles')
+      .then((response) => response.json())
+      .then((articles) => {
+        data.value = articles
+      })
+      .catch((error) => alert(error.stack))
 
     return {
       data

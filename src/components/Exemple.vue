@@ -28,8 +28,8 @@ export default {
         {{ donne.name }}
       </h5>
       <h4 class="para1" style="margin-bottom: 15px; width: 450px">
-        <a href="#" style="color: black; text-decoration: none"
-          ><strong>{{ donne.description }}</strong></a
+        <router-link to="/redaction" style="color: black; text-decoration: none"
+          ><strong>{{ donne.description }}</strong></router-link
         >
       </h4>
       <span class="auteur" style="color: rgba(0, 0, 0, 0.455)">{{ donne.auteur }}</span>

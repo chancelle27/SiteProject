@@ -1,7 +1,7 @@
-<script setup></script>
+<script></script>
 
 <template>
-  <nav class="navbar navbar-expand-lg header" style="position: fixed; top: 0px">
+  <nav class="navbar navbar-expand-lg header mb-5" style="position: fixed; top: 0px">
     <div class="container-fluid">
       <a class="navbar-brand text-white fw-bold" href="#"
         ><img
@@ -32,13 +32,16 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0"></ul>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active text-white fw-bold fs-5" aria-current="page" href="#">HOME</a>
+            <router-link class="nav-link active text-white fw-bold fs-5" aria-current="page" to="/"
+              >HOME</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fw-bold fs-5" href="#">POPULAIRE</a>
+            <router-link class="nav-link text-white fw-bold fs-5" to="/populaire"
+              >POPULAIRE</router-link>
           </li>
           <li class="nav-item">
-            <a class="nav-link text-white fw-bold fs-5" href="#">ACTIVITES</a>
+            <router-link class="nav-link text-white fw-bold fs-5" to="/activite"
+              >ACTIVITES</router-link>
           </li>
         </ul>
       </div>
@@ -50,5 +53,6 @@
 .header {
   background-color: rgb(160, 73, 119);
   width: 100%;
+  z-index: 10;
 }
 </style>

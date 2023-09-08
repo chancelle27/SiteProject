@@ -7,11 +7,10 @@ import Header from './Header.vue'
     class="presentation"
     style="
       background-color: rgb(160, 73, 119);
-      z-index: 10; /*background-image: url(src/assets/img/image10.jpeg);*/
     "
   >
     <Header />
-    <nav class="navbar navbar-expand-lg">
+    <nav class="navbar navbar-expand-lg mt-5">
       <div class="container">
         <div class="Texte py-5 text-left text-white fw-bold">
           <span><h5>BLOG</h5></span> <br />
