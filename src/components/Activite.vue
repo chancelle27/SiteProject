@@ -1,9 +1,7 @@
 <script></script>
 
 <template>
-    <div>
-        hea
-    </div>
+  <div>hea</div>
 </template>
 
 <style></style>

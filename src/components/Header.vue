@@ -33,15 +33,18 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <router-link class="nav-link active text-white fw-bold fs-5" aria-current="page" to="/"
-              >HOME</router-link>
+              >HOME</router-link
+            >
           </li>
           <li class="nav-item">
             <router-link class="nav-link text-white fw-bold fs-5" to="/populaire"
-              >POPULAIRE</router-link>
+              >POPULAIRE</router-link
+            >
           </li>
           <li class="nav-item">
             <router-link class="nav-link text-white fw-bold fs-5" to="/activite"
-              >ACTIVITES</router-link>
+              >ACTIVITES</router-link
+            >
           </li>
         </ul>
       </div>

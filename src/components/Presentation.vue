@@ -3,12 +3,7 @@ import Header from './Header.vue'
 </script>
 
 <template>
-  <div
-    class="presentation"
-    style="
-      background-color: rgb(160, 73, 119);
-    "
-  >
+  <div class="presentation" style="background-color: rgb(160, 73, 119)">
     <Header />
     <nav class="navbar navbar-expand-lg mt-5">
       <div class="container">

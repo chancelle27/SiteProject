@@ -42,7 +42,7 @@
                   alt=""
                   style="width: 40px; height: 20px; margin-bottom: 50px"
               /></span>
-              <span><p class="date" style="margin-bottom: 50px; color: white;">19 mai 2021</p></span>
+              <span><p class="date" style="margin-bottom: 50px; color: white">19 mai 2021</p></span>
               <span class="image"
                 ><img
                   src="src/assets/img/lot.png"

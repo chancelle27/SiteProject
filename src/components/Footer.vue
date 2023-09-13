@@ -24,7 +24,7 @@ export default {
         "
       >
         <img
-          src="src/assets/img/logo-gym .png"
+          src="c"
           alt=""
           style="height: 50px; width: 50px; margin-left: 120px; margin-top: 20px"
         />
