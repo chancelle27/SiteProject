@@ -12,8 +12,42 @@ export default {
       })
       .catch((error) => alert(error.stack))
 
+      const submit = (id) => {
+      
+      // Votre logique de soumission du formulaire ici
+      // URL de l'endpoint de l'API
+      const url = `http://127.0.0.1:8000/api/article?id=${id}`
+
+      
+      // Options de la requête, y compris la méthode 'POST', les en-têtes et le corps de la requête
+      const options = {
+        method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json' // Type de contenu JSON
+        }
+      }
+
+      // Effectue la requête POST
+      fetch(url, options)
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error('La requête a échoué avec le statut ' + response.status)
+          }
+          return response.json() // Si vous attendez une réponse JSON
+        })
+        .then((data) => {
+          console.log('Réponse JSON :', data)
+          // Faites quelque chose avec les données de la réponse ici
+        })
+        .catch((error) => {
+          console.error('Erreur :', error)
+          // Gérez les erreurs ici
+        })
+    }
+
     return {
-      data
+      data,
+      submit
     }
   }
 }
@@ -60,23 +94,24 @@ export default {
           <td>
             <div class="" style="display: flex; justify-content: space-between">
               <span class="bouton1"
-                ><router-link> <button
-                  class="btn"
-                  type="submit"
-                  to="/update"
-                  style="
-                    border: 1px solid black;
-                    background-color: rgb(160, 73, 119);
-                    color: white;
-                    margin-right: 10px;
-                  "
-                >
-                  Modifier
-                </button>
-            </router-link>
+                ><router-link class="mettreAJour" :to="'update/' + item.id" >
+                  <button
+                    class="btn"
+                    type="submit"
+                    style="
+                      border: 1px solid black;
+                      background-color: rgb(160, 73, 119);
+                      color: white;
+                      margin-right: 10px;
+                    "
+                  >
+                    Modifier
+                  </button>
+                </router-link>
               </span>
               <span class="bouton2">
                 <button
+                @click="submit(item.id)"
                   class="btn"
                   type="submit"
                   style="border: 1px solid black; background-color: rgb(160, 73, 119); color: white"

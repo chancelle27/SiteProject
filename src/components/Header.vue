@@ -42,8 +42,8 @@
             >
           </li>
           <li class="nav-item">
-            <router-link class="nav-link text-white fw-bold fs-5" to="/activite"
-              >ACTIVITES</router-link
+            <router-link class="nav-link text-white fw-bold fs-5" to="/dashboard"
+              >TABLEAU DE BORD</router-link
             >
           </li>
         </ul>
